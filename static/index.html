@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>ToDo List</h1>
+
+      <form id="create-form">
+        <input id="title" placeholder="New todo title (3-100)" required minlength="3" maxlength="100" />
+        <input id="description" placeholder="Description (optional)" />
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="filters">
+        <label>Search: <input id="q" /></label>
+        <label>Show: 
+          <select id="is_done">
+            <option value="">All</option>
+            <option value="false">Open</option>
+            <option value="true">Done</option>
+          </select>
+        </label>
+        <button id="reload">Reload</button>
+      </div>
+
+      <ul id="todos"></ul>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
