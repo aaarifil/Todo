@@ -1,6 +1,6 @@
+DROP DATABASE IF EXISTS restaurant_qr;
 CREATE DATABASE restaurant_qr;
 USE restaurant_qr;
-
 
 CREATE TABLE tables (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -34,16 +34,11 @@ CREATE TABLE order_items (
     FOREIGN KEY (menu_item_id) REFERENCES menu_items(id)
 );
 
+INSERT INTO tables (table_number) VALUES (1),(2),(3),(4),(5),(6),(7),(8),(9),(10);
 
-INSERT INTO tables (table_number) VALUES (1),(2),(3),(4);
-
-INSERT INTO menu_items (name, price)
-VALUES 
+INSERT INTO menu_items (name, price) VALUES 
+('Phở', 40000),
 ('Cơm gà', 35000),
 ('Trà đào', 25000),
 ('Bún bò', 40000);
-INSERT INTO tables (table_number) VALUES (5),(6),(7),(8), (9), (10);
-
-SELECT * FROM order_items;
-
-
+SELECT * FROM menu_items;

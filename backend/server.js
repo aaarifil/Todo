@@ -94,7 +94,7 @@ app.get('/api/generate-qrs', async (req, res) => {
 
   for (const table of tables) {
 
-    const url = `http://localhost:3000/menu?table=${table.table_number}`;
+    const url = `http://10.34.37.6:3000/menu?table=${table.table_number}`;
 
     const filePath = path.join(folder, `table-${table.table_number}.png`);
 
